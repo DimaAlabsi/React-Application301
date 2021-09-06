@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Properites from './properites';
+import HornedBeast from './HornedBeast';
 export class Main extends Component {
     render() {
         let animals=[{title:'UniWhal',Url:'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg',
@@ -15,7 +15,7 @@ export class Main extends Component {
                   <>
         {
        animals.map(item=>{
-           return <Properites title ={item.title} Url={item.Url} description={item.description} alt={item.alt}/>}
+           return <HornedBeast title ={item.title} Url={item.Url} description={item.description} alt={item.alt}/>}
          )
        }
     
