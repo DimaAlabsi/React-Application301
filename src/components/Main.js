@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Data from '../assests/data.json';
 import HornedBeast from './HornedBeast';
+import SelectedBeast from './SelectedBeast';
 
 
  class Main extends Component {
@@ -24,7 +25,7 @@ import HornedBeast from './HornedBeast';
         {
             
        Data.map(item=>{
-           return<HornedBeast title ={item.title} image_url={item.image_url} description={item.description} alt={item.keyword}/>;
+           return<HornedBeast title ={item.title} image_url={item.image_url} description={item.description} alt={item.keyword}  handleOpen={this.props.handleOpen} />;
         //    return <button onClick={this.NumOfFav}> Likes </button>;
         //    return     <HornedBeast likes={this.state.likes}/> ;
 

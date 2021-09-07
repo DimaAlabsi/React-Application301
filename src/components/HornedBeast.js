@@ -17,6 +17,7 @@ export class HornedBeast extends Component {
     this.setState({
         likes : this.state.likes + 1
     })
+    
 }
    
     render() {
