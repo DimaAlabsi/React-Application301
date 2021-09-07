@@ -1,4 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 export class HornedBeast extends Component {
     constructor(props){
@@ -16,20 +22,31 @@ export class HornedBeast extends Component {
     render() {
         return (
             <>
-                          <h2>{this.props.title}</h2>
-                         <img src={this.props.image_url} onClick={this.numOfFav} alt={this.props.keyword} title={this.props.title} width='500px' height='350px' />
-                         <br/>
-                         <img src={'https://www.pngfind.com/pngs/m/6-62455_instagram-heart-emoji-free-download-transparent-heart-symbol.png'} onClick={this.numOfFav} width='50px' height='40px' alt={this.props.keyword} />
-                         <p> the number of “Likes” : {this.state.likes}</p>
-                          <p>{this.props.description}</p>
-                        
-            </>
-        )
-    }
-}
+            <Container>
+  <Row>
+            <Col  xs={{ order: 'last' }}>
+
+<Card style={{ width: '18rem' }}>
+  <Card.Img variant="top" src={this.props.image_url} onClick={this.numOfFav} alt={this.props.keyword}  />
+  <Card.Body>
+    <Card.Title>{this.props.title}</Card.Title>
+    <Card.Text>
+    {this.props.description}
+    </Card.Text>
+    <Button variant="primary" onClick={this.numOfFav}> <p> Vote </p></Button>
+    <p> the number of “Likes”  {this.state.likes}</p>
+  </Card.Body>
+</Card>
+
+                      
+</Col >
+</Row>
+</Container>
+</>  
+    )
+   
+        }
+        }
+    
 
 export default HornedBeast
-
-
-
-
