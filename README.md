@@ -121,6 +121,21 @@ Finish time: 4:30 PM
 
 Actual time needed to complete:  1 hour & 30 minutes
 
+------------------------
+
+**Lab: Class 03**
+
+
+Number and name of feature: Feature #1: Display a Modal
+
+Estimate of time needed to complete:  4 hours
+
+Start time: 6:00 PM
+
+Finish time: 9:00 PM 
+
+Actual time needed to complete: 3 hours ..
+
 
 
 
