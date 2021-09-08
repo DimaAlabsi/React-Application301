@@ -3,8 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
-// import Data from './assests/data.json';
 import SelectedBeast from './components/SelectedBeast';
+// import  FormFilter from   './components/SelectedBeast';
 
 
 // import Header from './Header';
@@ -21,14 +21,11 @@ import SelectedBeast from './components/SelectedBeast';
        title : "",
        description :"",
        image_url: "",
+      keyword:"",
      
-       keyword:"",
 
-
-
-
-     }
-   }
+     }}
+   
    handleClose =()=>{
     this.setState({
 
@@ -46,22 +43,31 @@ import SelectedBeast from './components/SelectedBeast';
 
   });
 }
+// 
+
+
+
+
   render() {
     return (
     <>
     <Header/>
-    <Main  handleOpen={this.handleOpen}/>
+    <Main  handleOpen={this.handleOpen} 
+    
+     />
     <Footer/>
     <SelectedBeast  title={this.state.title}
      description={this.state.description}
     image_url={this.state.image_url} 
      showMd={this.state.showMd} 
      handleClose={this.handleClose}
-        keyword={this.state.keyword}     />
-    </>
+        keyword={this.state.keyword}/>
+        
+        </>
+
       )
   }
-}
 
+ }
 export default App
 

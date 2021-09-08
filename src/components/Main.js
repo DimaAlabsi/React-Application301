@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Data from '../assests/data.json';
 import HornedBeast from './HornedBeast';
 // import SelectedBeast from './SelectedBeast';
+// import  FormFilter from   './components/SelectedBeast';
 
 
  class Main extends Component {
@@ -25,7 +26,11 @@ import HornedBeast from './HornedBeast';
         {
             
        Data.map(item=>{
-           return<HornedBeast title ={item.title} image_url={item.image_url} description={item.description} alt={item.keyword} horns={item.horns} handleOpen= {this.props.handleOpen}/>;
+           return<HornedBeast title ={item.title} image_url={item.image_url} description={item.description} alt={item.keyword} horns={item.horns} handleOpen= {this.props.handleOpen}
+        //    form
+        // selectForm={this.props.selectForm}
+           
+           />;
 
         //    return <button onClick={this.NumOfFav}> Likes </button>;
         //    return     <HornedBeast likes={this.state.likes}/> ;

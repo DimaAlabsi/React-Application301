@@ -1,21 +1,34 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+
+
+import  FormFilter from   './components/SelectedBeast';
+
 import Col from 'react-bootstrap/Col';
 
  class HornedBeast extends Component {
     constructor(props){
         super(props);
         this.state={
-           likes: 0
+           likes: 0,
+       
         };
     }
     numOfFav = ()=>{
     this.setState({
         likes : this.state.likes + 1
     })
-    
 }
+
+//     addFormButton=()=>{
+//         this.setState({
+//             form :this.state.form + 1,})
+//            this.props.FormButton();
+// this.props.selectForm(this.props.image_url,this.props.description,this.props.keyword,this.props.title);
+
+//     } 
+    
 
 getOpenOne=()=>{
     let image_url = this.props.image_url ;
@@ -42,10 +55,10 @@ getOpenOne=()=>{
     {this.props.description} 
     <p> Horns= {this.props.horns}</p>
     </Card.Text>
-    <Button variant="danger"  size="sm" onClick={this.numOfFav}> <p> Vote </p> <p> {this.state.likes}</p>  </Button> 
+    <Button variant="danger"  size="sm" onClick={this.numOfFav}> <span> Vote </span> <p> {this.state.likes}</p>  </Button> 
 
+    <Button variant="outline-danger" size="sm" onClick={this.getOpenOne}> <p> Modal </p>  </Button> 
 
-    {/* <Button variant="outline-danger" size="sm" onClick={this.getOpenOne}> <p> Modal </p>  </Button>  */}
 
   </Card.Body>
 </Card>
