@@ -3,6 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from "react-bootstrap/Button";
 import { Card } from 'react-bootstrap';
 
+
  class SelectedBeast extends Component {
    
     
