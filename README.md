@@ -70,6 +70,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
+--------------------------
+**Lab: Class 01**
+
+Number and name of feature: Feature ' ***The component structure of the application*** '
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 3 PM
+
+Finish time: 4:30 PM
+
+Actual time needed to complete: 1 hour and a half..
+
+
 **Lab: Class 02**
 
 --------------------------------------------------------------
@@ -106,6 +120,7 @@ Start time: 3:00 PM
 Finish time: 4:30 PM 
 
 Actual time needed to complete:  1 hour & 30 minutes
+
 
 
 
