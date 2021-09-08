@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 
-export class HornedBeast extends Component {
+ class HornedBeast extends Component {
     constructor(props){
         super(props);
         this.state={
@@ -17,6 +16,16 @@ export class HornedBeast extends Component {
     })
     
 }
+
+getOpenOne=()=>{
+    let image_url = this.props.image_url ;
+    let title=this.props.title;
+    let keyword=this.props.keyword;
+    let description = this.props.description ;
+    // this.props(image_url,title,keyword,description)
+    
+    this.props.handleOpen(image_url,title,keyword,description) ;
+}
    
     render() {
         return (
@@ -26,7 +35,7 @@ export class HornedBeast extends Component {
             <Col>
 
 <Card style={{ width: '20rem' }}>
-  <Card.Img variant="top" src={this.props.image_url} onClick={this.numOfFav} alt={this.props.keyword} width='300px' height='300px'  />
+  <Card.Img variant="top" src={this.props.image_url} onClick={this.getOpenOne} alt={this.props.keyword} width='300px' height='300px'  />
   <Card.Body>
     <Card.Title>{this.props.title}</Card.Title>
     <Card.Text>
@@ -34,6 +43,10 @@ export class HornedBeast extends Component {
     <p> Horns= {this.props.horns}</p>
     </Card.Text>
     <Button variant="danger"  size="sm" onClick={this.numOfFav}> <p> Vote </p> <p> {this.state.likes}</p>  </Button> 
+
+
+    {/* <Button variant="outline-danger" size="sm" onClick={this.getOpenOne}> <p> Modal </p>  </Button>  */}
+
   </Card.Body>
 </Card>
 
