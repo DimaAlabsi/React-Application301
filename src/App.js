@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
-import Data from './assests/data.json';
+// import Data from './assests/data.json';
 import SelectedBeast from './components/SelectedBeast';
 
 
@@ -21,6 +21,10 @@ import SelectedBeast from './components/SelectedBeast';
        title : "",
        description :"",
        image_url: "",
+     
+       keyword:"",
+
+
 
 
      }
@@ -31,9 +35,9 @@ import SelectedBeast from './components/SelectedBeast';
       showMd:false
     })
   }
-  handleOpen=(title,description,image_url)=>{
+  handleOpen=(image_url,title,keyword,description)=>{
     this.setState({
-
+  keyword: keyword,
       showMd: true,
       title: title,
       description: description,
@@ -48,8 +52,12 @@ import SelectedBeast from './components/SelectedBeast';
     <Header/>
     <Main  handleOpen={this.handleOpen}/>
     <Footer/>
-    <SelectedBeast  title={this.state.title} description={this.state.description}
-    image_url={this.state.image_url}  showMd={this.state.showMd} handleClose={this.state.handleClose} />
+    <SelectedBeast  title={this.state.title}
+     description={this.state.description}
+    image_url={this.state.image_url} 
+     showMd={this.state.showMd} 
+     handleClose={this.handleClose}
+        keyword={this.state.keyword}     />
     </>
       )
   }
