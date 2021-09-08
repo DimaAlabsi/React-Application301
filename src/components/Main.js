@@ -20,12 +20,13 @@ import SelectedBeast from './SelectedBeast';
         
         return (
             
-                  <>
+                  <div className="row">
 
         {
             
        Data.map(item=>{
-           return<HornedBeast title ={item.title} image_url={item.image_url} description={item.description} alt={item.keyword}  handleOpen={this.props.handleOpen} />;
+           return<HornedBeast title ={item.title} image_url={item.image_url} description={item.description} alt={item.keyword} horns={item.horns}/>;
+
         //    return <button onClick={this.NumOfFav}> Likes </button>;
         //    return     <HornedBeast likes={this.state.likes}/> ;
 
@@ -33,7 +34,7 @@ import SelectedBeast from './SelectedBeast';
          )
        }
 
-            </>
+            </div>
             
         )
     }

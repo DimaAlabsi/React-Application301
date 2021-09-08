@@ -3,8 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
 
 export class HornedBeast extends Component {
     constructor(props){
@@ -23,26 +21,24 @@ export class HornedBeast extends Component {
     render() {
         return (
             <>
-            <Container>
-  <Row>
-            <Col  xs={{ order: 'last' }}>
+            
+  
+            <Col>
 
-<Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={this.props.image_url} onClick={this.numOfFav} alt={this.props.keyword}  />
+<Card style={{ width: '20rem' }}>
+  <Card.Img variant="top" src={this.props.image_url} onClick={this.numOfFav} alt={this.props.keyword} width='300px' height='300px'  />
   <Card.Body>
     <Card.Title>{this.props.title}</Card.Title>
     <Card.Text>
-    {this.props.description}
+    {this.props.description} 
+    <p> Horns= {this.props.horns}</p>
     </Card.Text>
-    <Button variant="primary" onClick={this.numOfFav}> <p> Vote </p></Button>
-    <p> the number of “Likes”  {this.state.likes}</p>
+    <Button variant="danger"  size="sm" onClick={this.numOfFav}> <p> Vote </p> <p> {this.state.likes}</p>  </Button> 
   </Card.Body>
 </Card>
 
                       
 </Col >
-</Row>
-</Container>
 </>  
     )
    
