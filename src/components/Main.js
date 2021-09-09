@@ -1,40 +1,38 @@
 import React, { Component } from 'react';
-import Data from '../assests/data.json';
 import HornedBeast from './HornedBeast';
 // import SelectedBeast from './SelectedBeast';
-// import  FormFilter from   './components/SelectedBeast';
 
 
  class Main extends Component {
 //     constructor(props){
 //         super(props);
 //         this.state={
-//            likes: 0
+//            Data: Data
 //         };
 //     }
-//     numOfFav = ()=>{
+// //     numOfFav = ()=>{
 //     this.setState({
 //         likes : this.state.likes + 1
 //     })
 // }
+
+
+ 
     render() {
         
         return (
             
                   <div className="row">
-
-        {
+                         {/* <FormFilter  HandleChange={this.HandleChange}/> */}
+  {
             
-       Data.map(item=>{
-           return<HornedBeast title ={item.title} image_url={item.image_url} description={item.description} alt={item.keyword} horns={item.horns} handleOpen= {this.props.handleOpen}
-        //    form
-        // selectForm={this.props.selectForm}
+      this.props.Data.map(item=>{
            
-           />;
+return(
 
-        //    return <button onClick={this.NumOfFav}> Likes </button>;
-        //    return     <HornedBeast likes={this.state.likes}/> ;
-
+           <HornedBeast title ={item.title} image_url={item.image_url} description={item.description} alt={item.keyword} horns={item.horns} handleOpen= {this.props.handleOpen}       
+           />
+           )
         }
          )
        }

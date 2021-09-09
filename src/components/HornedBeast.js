@@ -3,7 +3,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 
-import  FormFilter from   './components/SelectedBeast';
 
 import Col from 'react-bootstrap/Col';
 
